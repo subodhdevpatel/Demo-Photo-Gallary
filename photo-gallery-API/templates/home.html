@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron"><h1>Image Library API</h1></div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">BASE URL</th>
+            <td>{{request.build_absolute_uri}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="list-group mt-2">
+        <a
+          href="{{request.build_absolute_uri}}api/images/"
+          target="_blank"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List all images</h5>
+          </div>
+          <p class="mb-1">
+            Hit GET request on link below to get images by 20 paginated
+          </p>
+          <small>api/images/</small>
+        </a>
+        <a
+          href="{{request.build_absolute_uri}}api/images/"
+          target="_blank"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Delete multiple images</h5>
+          </div>
+          <p class="mb-1">
+            Delete multiple images by image ids. Sent DELETE request on link
+            below with request body like: {"image_ids":[1,2,3]}
+          </p>
+          <small class="text-muted">api/images/</small>
+        </a>
+        <a
+          href="{{request.build_absolute_uri}}api/upload/"
+          target="_blank"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Upload multiple images</h5>
+          </div>
+          <p class="mb-1">
+            Sent POST request on below link to upload multiple images.
+          </p>
+          <small class="text-muted">api/upload/</small>
+        </a>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

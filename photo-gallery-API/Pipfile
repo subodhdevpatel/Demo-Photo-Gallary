@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-storages = "*"
+boto3 = "*"
+pillow = "*"
+icecream = "*"
+django-cors-headers = "*"
+blurhash = "*"
+numpy = "*"
+opencv-python = "*"
+urllib3 = "*"
+blurhash-python = "*"
+imagehash = "*"
+requests = "*"
+python-decouple = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
